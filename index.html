@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face Expression Detector</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    #title {
+      color: #110202;
+      margin-bottom: 10px;
+    }
+
+    #videoContainer {
+      position: relative;
+      border: 10px solid;
+      border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+      padding: 5px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #videoLabel {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    video {
+      border-radius: 5px;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Face Expression Detector</h1>
+
+  <div id="videoLabel">Live Camera Feed</div>
+  <div id="videoLabel">Made By Mayank Tiwari</div>
+  <div id="videoContainer">
+    <video id="video" width="720" height="400" autoplay muted></video>
+  </div>
+</body>
+</html>
